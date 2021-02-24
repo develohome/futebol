@@ -201,12 +201,20 @@ var times2020 =[
                 }
             ];
 
+var camposClubes = [ 'clube','pts','jogos','vitorias','empates','derrotas','gp','gc'];
+
 var tbody = document.querySelector('.tbody')
     for(let i = 0 ; i < times2020.length ; i++){
         let tr = document.createElement('tr');
             tbody.appendChild(tr);
     }
-let tr = document.querySelectorAll('tr');
-    for(let i = 0 ; tr.length ; i++){
-        alert(times2020[i].1)
+var tr = document.querySelectorAll('tr');
+    
+    for(var i = 0; i < tr.length ; i++){
+        
+            var td = document.createElement('td');
+                td.innerHTML = times2020[i].clube;
+                tr[i+1].appendChild(td);
+       
+        
     }
